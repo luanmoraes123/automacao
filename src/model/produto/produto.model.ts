@@ -1,14 +1,10 @@
-const knex = require('../../service/knex');
+import knex from '../../service/knex';
 
-const getAll = () => {
+export const getAll = () => {
   return knex('produtos').select();
 }
 
-const store = (params) => {
+export const store = (params) => {
   return knex('produtos').insert(params);
 }
 
-module.exports = {
-  getAll,
-  store
-}
